@@ -1,0 +1,2 @@
+# appPostsBox
+app type blogging
