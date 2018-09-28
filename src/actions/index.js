@@ -4,7 +4,7 @@ import {
     AT_POSTS
 } from './action-types';
 
-const END_POINT = "http://localhost:3100";
+const END_POINT = "http://localhost:3000";
 
 export const readAllPosts = () => {
     return function (dispatch) {

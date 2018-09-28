@@ -9,7 +9,7 @@ import NotFound from './components/NotFound'
 class  Routes extends Component {
     render() {
         return (
-            <div>
+            <div className="container">
                 <Router history={browserHistory}>
                     <Route path="/" component={PostList} />
                     <Route path="create-post" component={PostForm} />

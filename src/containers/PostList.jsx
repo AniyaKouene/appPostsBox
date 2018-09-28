@@ -3,17 +3,39 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 import { readAllPosts } from "../actions/index";
+import PostListItem from '../components/PostListItem'
 
 class PostList extends Component {
   componentWillMount(){
     this.props.readAllPosts()
   }
+
+  renderPost(){
+    const {posts} = this.props;
+    if(posts){
+      return posts.map((post) => {
+        return <PostListItem key={post.id} post={post}/>
+      })
+    }
+  }
   render() {
     console.log(this.props.posts);
     
     return (
-      <div>
+      <div className="row mx-auto">
         <h1>Liste de posts</h1>
+        <table className=" table table-striped table-responsive-xl table-hover">
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {this.renderPost()}
+        </tbody>
+
+        </table>
       </div>
     );
   }
