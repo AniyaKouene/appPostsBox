@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import {Link} from 'react-router';
 
 import { readAllPosts, deletePost } from "../actions/index";
 
@@ -30,6 +31,9 @@ class PostList extends Component {
     return (
       <div className="row mx-auto">
         <h1>Liste de posts</h1>
+        <div className="button_add">
+        <Link to={'create-post'}><button className="btn btn-primary btn-circle btn-lg">+</button></Link>
+        </div>
         <table className=" table table-striped table-responsive-xl table-hover">
           <thead>
             <tr>

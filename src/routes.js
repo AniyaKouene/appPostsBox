@@ -1,5 +1,5 @@
 import React, {Component}  from 'react';
-import {Router, Route, browserHistory, IndexRoute}  from 'react-router';
+import {Router, Route, browserHistory}  from 'react-router';
 
 import PostList from './containers/PostList'
 import PostForm from './containers/PostForm'
