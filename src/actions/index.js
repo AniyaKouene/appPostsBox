@@ -49,7 +49,7 @@ export const createPost = (post) => {
         {
             title: post.title,
             content: post.content,
-            author: post.axios
+            author: post.author
         })
             .then((res) => {
                 dispatch({
