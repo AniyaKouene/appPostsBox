@@ -20,7 +20,7 @@ export const readAllPosts = () => {
 
 export const readPost = (id) => {
     return function (dispatch) {
-        axios.get(`${END_POINT}/post/${id}`)
+        axios.get(`${END_POINT}/posts/${id}`)
             .then((res) => {
                 dispatch({
                     type: AT_POSTS.READ,
@@ -32,7 +32,7 @@ export const readPost = (id) => {
 
 export const deletePost = (id) => {
     return function (dispatch) {
-        axios.delete(`${END_POINT}/post/${id}`)
+        axios.delete(`${END_POINT}/posts/${id}`)
             .then((res) => {
                 dispatch({
                     type: AT_POSTS.DELETE,
@@ -45,7 +45,7 @@ export const deletePost = (id) => {
 
 export const createPost = (post) => {
     return function (dispatch) {
-        axios.post(`${END_POINT}/post/`,
+        axios.post(`${END_POINT}/posts/`,
         {
             title: post.title,
             content: post.content,
